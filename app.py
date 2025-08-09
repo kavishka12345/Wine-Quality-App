@@ -5,7 +5,8 @@ import joblib
 import plotly.express as px
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error
-
+import os
+file_path = os.path.join(os.path.dirname(__file__), 'data', 'winequality.csv')
 @st.cache_data
 def load_data():
     return pd.read_csv("data/winequality.csv")
